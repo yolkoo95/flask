@@ -1,3 +1,5 @@
 # user configure
 *.log
 py3env/
+*.out
+
