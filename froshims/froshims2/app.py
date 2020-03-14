@@ -41,7 +41,12 @@ def register():
 		server.login(from_account , os.getenv("password"))
 		server.sendmail(from_account, to_account, message.as_string())
 		print("The mail has been sent successfully to %s." %(to_account))
-		return render_template("success.html", name=name, email=to_account)
+
+		# generate mail login page, noting 'https' must be added when using '<a>' tag 
+		mail_host_name = to_account[to_account.find('@')+1 : ]
+		mail_login_page = "https://mail." + mail_host_name
+
+		return render_template("success.html", name=name, email=to_account, email_login_page=mail_login_page)
 	
 	except smtplib.SMTPException as e:
 		print(e)

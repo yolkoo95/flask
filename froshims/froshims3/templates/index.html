@@ -1,0 +1,16 @@
+{% extends "layout.html"%}
+
+{% block body %}
+		<h1> Register for froshims</h1>
+		<form action="/register" method="post">
+			<input name="name" placeholder="Name" autofocus type="text">
+			<select name="dorm">
+				<option value="Dorm" selected disabled>Dorm</option>
+				<option value="Canaday">Canaday</option>
+				<option value="Apley Court">Apley Court</option>
+				<option value="Washington">Washington</option>
+			</select>
+			<input name="submit" type="submit" value="Register">
+		</form>
+		<h2> see all <a href="/registered">registrants</a> </h2>
+{% endblock %}
