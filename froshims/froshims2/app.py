@@ -24,7 +24,7 @@ def register():
 	to_account = mail
 
 	# set message
-	content = "Dear %s, congratulate that you have registered successfully, and your information is as follow:\nName: %s\nEmail: %s\nDorm: %s\n" %(name, name, to_account, dorm)
+	content = "Dear %s, congratulate that you have registered successfully, and your information is as follow:\n\tName: %s\n\tEmail: %s\n\tDorm: %s\n" %(name, name, to_account, dorm)
 	message = MIMEText(content, 'plain', 'utf-8') # content, format, code
 	message['Subject'] = "Froshims Project"
 	message['From'] = from_account
