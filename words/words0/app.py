@@ -6,7 +6,7 @@ app = Flask(__name__)
 dic = []
 with open("/Users/Quminzhi/Documents/python/flask/words/words0/large", "r") as file:
     for line in file.readlines():
-        dic.append(line.rstrip) # str.rstrip: delete ' ' on each side of str
+        dic.append(line.rstrip()) # str.rstrip: delete ' ' on each side of str
 
 @app.route('/')
 def index():
