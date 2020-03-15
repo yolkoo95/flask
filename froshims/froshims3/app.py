@@ -14,7 +14,7 @@ def register():
 	if not name or not dorm:
 		return render_template("failure.html")
 	
-	with open("registered.csv", "a") as file # instead of "file = open(...), file.close"
+	with open("registered.csv", "a") as file: # instead of "file = open(...), file.close"
 		writer = csv.writer(file)
 		writer.writerow((name, dorm)) # a tuple of (1st col, 2nd col, ...)
 	
