@@ -3,9 +3,9 @@
 {% block body %}
 		<h1> Register for froshims</h1>
 		<form action="/register" method="post">
-			<input name="name" placeholder="Name" autofocus type="text">
+			<input type="text" name="name" autocomplete="off" placeholder="Name" autofocus>
 			<select name="dorm">
-				<option value="Dorm" selected disabled>Dorm</option>
+				<option value="" selected disabled>Dorm</option>
 				<option value="Canaday">Canaday</option>
 				<option value="Apley Court">Apley Court</option>
 				<option value="Washington">Washington</option>
@@ -23,7 +23,7 @@
 					alert('You must provide your name');
 					return false;
 				}
-				if (!document.querySelector('select').value) or document.querySelector('select').value == 'Dorm' {
+				if (!document.querySelector('select').value) {
 					alert('You must provide your dorm');
 					return false;
 				}
