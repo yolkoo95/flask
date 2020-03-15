@@ -8,14 +8,14 @@
 
     <body>
         <form action="/search", methods="get">
-            <input type="text" name="query" autofocus autocomplete="off" placeholdr="Query">
+            <input type="text" name="query" autofocus autocomplete="off" placeholder="Query">
             <input type="submit" name="submit" value="Query">     
         </form>
     </body>
 
     <script>
         document.querySelector('form').onsubmit = function() {
-            if (!document.querySelector('query').value) {
+            if (!document.querySelector('input').value) {
                 alert('You must input prefix of a word you are looking for!');
                 return false;
             }
