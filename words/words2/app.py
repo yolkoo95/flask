@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 
@@ -18,4 +18,4 @@ def search():
     
     words = [word for word in dic if q and word.startswith(q)]
 
-    return render_template("search.html", words=words)
+    return jsonify(words) # instead of search.html
