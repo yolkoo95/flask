@@ -177,4 +177,4 @@ media
 static
 
 *.out
-session
+session/
