@@ -7,11 +7,9 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-notes = [] # initialization
-
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if session.get("notes") is None: # session initialization: session works like multithreads
+    if session.get("notes") is None: # session initialization: session works like multithreads, specifc notes for each user;
         session["notes"] = []
 
     if request.method == "POST":
