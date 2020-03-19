@@ -7,6 +7,7 @@ engine = create_engine(os.getenv("database_url"))
 db = scoped_session(sessionmaker(bind=engine))
 
 def main():
+    # import data from csv into remote database
     with open("flights.csv", "r") as file:
         reader = csv.reader(file)
         for origin, destination, duration in reader:
