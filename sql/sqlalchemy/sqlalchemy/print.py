@@ -15,8 +15,14 @@ db = scoped_session(sessionmaker(bind=engine))
 def main():
     #  print flights
     flights = db.execute("SELECT origin, destination, duration FROM flights")
+    print("Flights Info:")
     for flight in flights:
         print(f"{flight.origin} to {flight.destination}, {flight.duration} minutes.")
+
+    passengers = db.execute("SELECT name, flight_id FROM passengers")
+    print("Passengers Info:")
+    for passenger in passengers:
+        print(f"{passenger.name}: {passenger.flight_id}")
 
 if __name__ == "__main__":
     main()
