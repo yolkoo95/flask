@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // select first thing that matched
+                document.querySelector("#red").onclick = function() {
+                    document.querySelector("#hello").style.color = "red";
+                }
+                document.querySelector("#green").onclick = function() {
+                    document.querySelector("#hello").style.color = "green";
+                }
+                document.querySelector("#blue").onclick = function() {
+                    document.querySelector("#hello").style.color = "blue";
+                }
+            })
+        </script>
+       
+        <title>color0</title>
+    </head>
+    <body>
+        <h1 id="hello">Hello</h1>
+        <button id="red">red</button>
+        <button id="green">green</button>
+        <button id="blue">blue</button>
+    </body>
+</html>

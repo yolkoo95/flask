@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // select first thing that matched
+                document.querySelectorAll(".color-change").forEach(function(button) {
+                    button.onclick = function() {
+                        document.querySelector("#hello").style.color = button.dataset.color;
+                    }
+                })
+            })
+        </script>
+       
+        <title>color1</title>
+    </head>
+    <body>
+        <h1 id="hello">Hello</h1>
+        <button class="color-change" data-color="red">red</button>
+        <button class="color-change" data-color="green">green</button>
+        <button class="color-change" data-color="blue">blue</button>
+    </body>
+</html>
