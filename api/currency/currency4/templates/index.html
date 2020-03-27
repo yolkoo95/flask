@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        <title>currency4</title>
+    </head>
+    <body>
+        <form id="new-form">
+            <!-- id is for js in client side, and name is for python in server side -->
+            <input id="currency" name="currency" type="text" autocomplete="off" autofocus placeholder="Currency">
+            <input type="submit" value="Get Exchange Rate">
+        </form>
+        <br>
+        <div id="result"></div>
+    </body>
+</html>

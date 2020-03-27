@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                document.querySelector("#submit").disabled = true;
+                document.querySelector("#task").onkeyup = () => {
+                    if (document.querySelector("#task").value.length > 0) {
+                        document.querySelector("#submit").disabled = false;
+                    }
+                    else {
+                        document.querySelector("#submit").disabled = true;
+                    }
+                }
+                
+                document.querySelector("#new-task").onsubmit = () => {
+                    // create li tag
+                    const li = document.createElement("li");
+                    li.innerHTML = document.querySelector("#task").value;
+                    
+                    document.querySelector("#tasks").append(li);
+
+                    // reset text content
+                    document.querySelector("#task").value = "";
+                    document.querySelector("#submit").disabled = true;
+
+                    return false;
+                }
+            })
+        </script>
+
+        <title>task2</title>
+    </head>
+    <body>
+        <h1>TASK</h1>
+        <ul id="tasks">
+
+        </ul>
+        <form id="new-task">
+            <input id="task" type="text" autofocus autocomplete="off" placeholder="new task">
+            <button id="submit">submit</button>
+        </form>
+    </body>
+</html>
