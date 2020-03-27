@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // start by load the first para.
+                load_page('first')
+
+                // set links up to load new pages
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.onclick = () => {
+                        load_page(link.dataset.page);
+                        // do NOT open a new page
+                        return false
+                    };
+                });
+            });
+        </script>
+        <script src="{{ url_for('static', filename='load.js') }}"></script>
+        
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <h1>Let life be beautiful like summer flowers</h1>
+
+        <ul id="nav">
+            <li><a href="" class="nav-link" data-page="first">First Para.</a></li>
+            <li><a href="" class="nav-link" data-page="second">Second Para.</a></li>
+            <li><a href="" class="nav-link" data-page="third">Third Para.</a></li>
+            <li><a href="" class="nav-link" data-page="fourth">Fourth Para.</a></li>
+            <li><a href="" class="nav-link" data-page="fifth">Fifth Para.</a></li>
+        </ul>
+
+        <hr>
+
+        <div id="body">
+
+        </div>
+    </body>
+</html>

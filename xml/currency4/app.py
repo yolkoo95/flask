@@ -19,16 +19,16 @@ def convert():
     
     # make sure request succeeded
     if res.status_code != 200:
-        return jsonify({"success": False}), 401
+        return jsonify({"success": False})
     
     data = res.json()
 
     # make sure access to data
     if data["success"] == False:
-        return jsonify({"success": False}), 402
+        return jsonify({"success": False})
 
     # make sure currency exists
     if currency not in data["rates"]:
-        return jsonify({"success": False}), 403
+        return jsonify({"success": False})
 
     return jsonify({"success": True, "rate": data["rates"][currency]})

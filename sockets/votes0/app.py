@@ -16,4 +16,7 @@ def index():
 def vote(data):
     selection = data["selection"]
     emit("announce vote", {"selection": selection}, broadcast=True)
+
+if __name__ == '__main__':
+    app.run(debug=True)
     
