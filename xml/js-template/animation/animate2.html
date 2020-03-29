@@ -33,7 +33,7 @@
                 const h1 = document.querySelector('h1');
                 h1.style.animationPlayState = 'paused';
                 document.querySelector('#switcher').onclick = () => {
-                    if (h1.style.animationPlayState == 'paused') {
+                    if (h1.style.animationPlayState === 'paused') {
                         h1.style.animationPlayState = 'running';
                     }
                     else {

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+        <script id="post-template" type="text/x-handlebars-template">
+            <div class='post'>
+                <!-- with raw to fix the conflict between handlebar and flask when using jinja2 -->
+                {% raw -%}
+                    {{ contents }}
+                {%- endraw %}
+            
+                <button class="hide">Hide</button>
+            </div>
+        </script>
+        <script src="{{ url_for('static', filename='lib.js') }}"></script>
+        <title>Posts3</title>
+    </head>
+    <body>
+        <div id='posts'>
+
+        </div>
+    </body>
+</html>

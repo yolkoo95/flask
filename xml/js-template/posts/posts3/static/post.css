@@ -1,0 +1,29 @@
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.post {
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 10px;
+
+    animation-name: hide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+body {
+    padding: 50px;
+}
+
+.hide {
+    float: right;
+}
+
+
