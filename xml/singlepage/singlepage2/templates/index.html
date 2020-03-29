@@ -6,14 +6,14 @@
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 // start by load the first para.
-                load_page('first')
+                load_page('first');
 
                 // set links up to load new pages
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.onclick = () => {
                         load_page(link.dataset.page);
                         // do NOT open a new page
-                        return false
+                        return false;
                     };
                 });
             });

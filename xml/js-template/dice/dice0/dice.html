@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+        <script>
+            // define template
+            const template = Handlebars.compile("<li>You rolled a {{ value }}</li>");
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('#roll').onclick = () => {
+                    const roll = Math.floor((Math.random() * 6) + 1);
+                    const content = template({'value': roll});
+                    document.querySelector("#results").innerHTML += content;
+                }
+            })
+        </script>
+        
+        <title>Dice0</title>
+    </head>
+    <body>
+        <button id="roll">Roll</button>
+        <ul id="results">
+
+        </ul>
+    </body>
+</html>
