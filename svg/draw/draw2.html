@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="draw2.js"></script>
+        <style>
+            .container {
+                text-align: center;
+            }
+        </style>
+        <title>Draw</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Unicorn Web Draw</h1>
+            <div id="options" class="row">
+                <select id="color-picker">
+                    <option value="black" selected>Black</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+                <select id="thickness-picker">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <button id="erase">Erase</button>
+            </div>
+        </div>
+        <svg id="draw"></svg>
+    </body>
+</html>
